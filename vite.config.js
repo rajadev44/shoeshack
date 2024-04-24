@@ -11,4 +11,8 @@ export default defineConfig({
       "@/lib": "/src/lib",
     },
   },
+ server:{
+  host: true,
+  port: 80
+ }
 })
