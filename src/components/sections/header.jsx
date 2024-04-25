@@ -1,4 +1,4 @@
-import Container from "../ui/container"
+import Container, { ContainerV2 } from "../ui/container"
 import { Button } from "../ui/button"
 import { Link } from "react-router-dom"
 import Icons from "../../assets/icons"
@@ -8,8 +8,10 @@ import { Menu as MenuIcon } from "lucide-react";
 const header = () => {
   return (
     <Container>
+      <ContainerV2>
+        
     <header className="my-3 md:my-8">
-      <div className='flex items-center justify-between md:justify-around'>
+      <div className='flex items-center justify-between'>
         
         <div className="flex items-center justify-center space-x-1">
           <menu className="md:hidden">
@@ -38,6 +40,7 @@ const header = () => {
         </div>
       </div>
     </header>
+    </ContainerV2>
     </Container>   
   )
 }

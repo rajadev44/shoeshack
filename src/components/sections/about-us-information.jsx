@@ -1,9 +1,11 @@
-import Container from '@/components/ui/container'
+import Container, { ContainerV2 } from '@/components/ui/container'
 import Typography from '../ui/typography'
 
 const aboutUsInformation = () => {
   return (
     <Container>
+      <ContainerV2 >
+        
       <div className="flex flex-col items-center justify-center mt-8 space-y-10 md:space-y-20 md:my-48 ">
         <div className='space-y-5'>
           <Typography element='h2' className='pb-5 md:pb-8' >Our Mission</Typography>  
@@ -25,6 +27,9 @@ const aboutUsInformation = () => {
           </Typography>
         </div>
       </div>
+    
+      
+      </ContainerV2>
     </Container>
   )
 }

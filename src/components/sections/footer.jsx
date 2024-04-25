@@ -1,4 +1,4 @@
-import Container from '@/components/ui/container'
+import Container, { ContainerV2 } from '@/components/ui/container'
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 const footer = () => {
   return (
     <Container >
+        <ContainerV2>
+
+
         <footer className='pt-8 space-y-8 md:space-y-10 md:pt-24'>
           <hr className='border-primary' />
           <div className='flex flex-wrap justify-between gap-4'>
@@ -53,6 +56,9 @@ const footer = () => {
             </ul>
           </div>
         </footer>
+
+      </ContainerV2>
+
     </Container>
   )
 }

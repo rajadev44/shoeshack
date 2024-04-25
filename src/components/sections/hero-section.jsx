@@ -1,6 +1,6 @@
 import Container from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-
+import PropTypes from 'prop-types';
 
 const heroSection = () => {
 
@@ -20,7 +20,7 @@ const heroSection = () => {
   )
 }
 
-export const HeroSectionV2 = () => {
+export const HeroSectionV2 = ({children}) => {
   return (
     <Container className='px-1'>
             <div className="flex items-center justify-center h-[40vh] md:h-[60vh] relative">
@@ -28,11 +28,20 @@ export const HeroSectionV2 = () => {
                  <img alt='hero-section' src='/hero-section-bg-2.png' className='object-cover w-full h-full rounded-none' />
                 </div>
                 <div className="space-y-4 text-center md:space-y-8 text-primary">
-                    <h1 className={`text-3xl font-bold md:text-6xl `}>About Us</h1>
+                    <h1 className={`text-3xl font-bold md:text-6xl `}>{children}</h1>
                 </div>
             </div>
     </Container>
   )
 }
+
+
+HeroSectionV2.defaultProps = {  
+  children: 'About Us'
+}
+
+HeroSectionV2.propTypes = {
+  children: PropTypes.string
+}  
 
 export default heroSection;

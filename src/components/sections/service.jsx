@@ -1,8 +1,10 @@
-import Container from "../ui/container"
+import Container, { ContainerV2 } from "../ui/container"
 import { Headset, Truck } from "lucide-react"
 const service = () => {
   return (
     <Container>
+        <ContainerV2>
+            
         <div className="flex flex-wrap justify-between gap-4 mt-8 md:mt-28 ">
             <div className="flex flex-col p-5 space-y-2 rounded-sm grow lg:basis-1/4 bg-primary text-primary-foreground">
                 <Truck className="w-[1em] h-[1em] text-9xl" />
@@ -22,6 +24,9 @@ const service = () => {
                 <p className="text-muted">Description goes here, tagline goes here..</p>
             </div>
         </div>
+        
+        </ContainerV2>
+
     </Container>
   )
 }
