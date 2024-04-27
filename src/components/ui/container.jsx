@@ -12,7 +12,7 @@ export default function container({className ='px-3', children }) {
 }
 
 export function ContainerV2({className: style, children }) {
-  const className = cn("w-full mx-auto max-w-screen-lg", style);
+  const className = cn("w-full mx-auto max-w-screen-xl", style);
   
   return (
     <div className={`${className}  `}>

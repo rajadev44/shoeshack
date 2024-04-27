@@ -10,9 +10,5 @@ export default defineConfig({
       "@/pages": "/src/pages",
       "@/lib": "/src/lib",
     },
-  },
- server:{
-  host: true,
-  port: 3000
- }
+  }
 })

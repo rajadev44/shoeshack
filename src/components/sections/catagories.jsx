@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 import Container, { ContainerV2 } from "../ui/container";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -91,6 +91,9 @@ const Catagories = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          
+          <CarouselPrevious className='shadow-sm show lg:hidden left-3 bg-primary text-primary-foreground'/>
+          <CarouselNext className='shadow-sm show lg:hidden right-3 bg-primary text-primary-foreground'/>
         </Carousel>
       </div>
       </ContainerV2>

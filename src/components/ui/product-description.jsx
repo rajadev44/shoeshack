@@ -73,7 +73,7 @@ const ProductDescription = () => {
                       </div>                    
                       <div className="flex flex-wrap gap-2 mt-auto md:ml-3">
                         <Quantity min={1} value={quantityValue} onChange={handleQuantityChange}/>
-                        <Button>ADD TO CART</Button>
+                        <Button className='py-5'>ADD TO CART</Button>
                         <div className="flex items-center justify-between basis-full ">
                           <span className="flex gap-2">
                             <Typography element="p" className="text-xs font-semibold md:text-sm"> SKU: </Typography>

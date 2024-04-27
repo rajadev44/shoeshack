@@ -14,6 +14,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious
   
 } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
@@ -57,7 +59,7 @@ const products = [
 
         <Carousel 
             plugins={[plugin.current]}
-            className='w-full mx-auto'
+            className='w-full mx-auto '
             options={{ loop: true }}
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
@@ -87,6 +89,8 @@ const products = [
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className='shadow-sm show lg:hidden left-3 bg-primary text-primary-foreground'/>
+          <CarouselNext className='shadow-sm show lg:hidden right-3 bg-primary text-primary-foreground'/>
         </Carousel>
 
     </ContainerV2>

@@ -17,7 +17,7 @@ export default function Map(){
 
   return (
     // Important! Always set the container height explicitly
-   <Container className='px-1 my-20 h-[40vh] md:my-40'>
+   <Container className='px-1 my-10 h-[40vh] md:my-20 md:mt-28'>
     <ContainerV2 className='h-full'>
 
       <GoogleMapReact

@@ -9,11 +9,11 @@ const footer = () => {
         <ContainerV2>
         <footer className='pt-8 space-y-8 md:space-y-10 md:pt-24'>
           <hr className='border-primary' />
-          <div className='flex flex-wrap justify-between gap-4 gap-y-10'>
+          <div className='flex flex-wrap items-start justify-between gap-4 gap-y-10'>
             
-              <div className='grid space-y-4 md:space-y-8 basis-80 grow md:place-items-start place-items-center'>
+              <div className='grid space-y-4 md:space-y-6 basis-80 grow md:place-items-start place-items-center'>
                 <p className="text-xl font-semibold text-primary md:text-3xl" > ShoeShack</p>
-                <p className='text-sm text-center md:text-lg text-muted-primary md:text-start lg:text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis optio ...</p>
+                <p className='text-sm text-center md:text-normal text-muted-primary md:text-start lg:text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis optio ...</p>
               </div>
               
               <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>

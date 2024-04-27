@@ -34,8 +34,8 @@ const header = () => {
         <div>
           <ul className="flex space-x-1 md:space-x-4">
             {/* <li> <Icons name='search'/>  </li> */}
-            <li> <Icons name='user'/>    </li>
-            <li> <Icons name='cart'/>    </li>
+            <li> <Link to='/dashboard'><Icons name='user'/> </Link>    </li>
+            <li> <Link to='/cart'><Icons name='cart'/> </Link>    </li>
           </ul>
         </div>
       </div>

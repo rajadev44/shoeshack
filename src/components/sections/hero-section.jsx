@@ -28,7 +28,7 @@ export const HeroSectionV2 = ({children}) => {
                  <img alt='hero-section' src='/hero-section-bg-2.png' className='object-cover w-full h-full rounded-none' />
                 </div>
                 <div className="space-y-4 text-center md:space-y-8 text-primary">
-                    <h1 className={`text-3xl font-bold md:text-6xl `}>{children}</h1>
+                    <h1 className={`text-3xl font-bold md:text-5xl `}>{children}</h1>
                 </div>
             </div>
     </Container>
