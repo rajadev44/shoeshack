@@ -7,8 +7,6 @@ const footer = () => {
   return (
     <Container >
         <ContainerV2>
-
-
         <footer className='pt-8 space-y-8 md:space-y-10 md:pt-24'>
           <hr className='border-primary' />
           <div className='flex flex-wrap justify-between gap-4'>
