@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 const Product = () => {
     const productsData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
-    <Container>
+    <Container >
         <ContainerV2 className="mt-6 md:mt-8">
             <div className="flex flex-col gap-5 md:flex-row ">
                 <div className="w-full space-y-6 md:w-3/12">
@@ -24,7 +24,7 @@ const Product = () => {
                             <Input type='number' placeholder='min'/>
                             <Input type='number' placeholder='max'/>
                         </div>
-                        <Button className='md:ml-auto' variant='secondary'> Apply </Button>
+                        <Button className='' variant='secondary'> Apply </Button>
                     </div>
                 </div>
                 <div className="flex flex-wrap justify-center w-full gap-x-2 gap-y-5 md:w-9/12 grow">
@@ -32,7 +32,7 @@ const Product = () => {
                     (<Link  key={index} className="group basis-60 grow md:grow-0 group-hover:bg-secondary" to='/individual-product-page'><div className="p-4 space-y-2 rounded-sm basis-60 grow md:grow-0 group-hover:bg-secondary">
                         <img src="/banner-1.jpg" className="border-b border-primary"/>
                         <Typography className='group-hover:underline group-hover:underline-offset-4' like='h5'>Product Name</Typography>
-                        <Typography variant='muted'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quod.</Typography>
+                        <Typography className="text-sm md:text-sm" variant='muted'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quod.</Typography>
                         <Typography className='pt-5 text-center group-hover:underline group-hover:underline-offset-4' like='h6' > £24.66</Typography>
                     </div></Link>
                     ))}

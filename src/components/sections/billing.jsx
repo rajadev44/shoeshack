@@ -79,7 +79,7 @@ const Billing = () => {
                           <div>
                             <h3 className='mt-4 text-lg font-semibold'>Payment Method</h3>
                             <div className="flex flex-wrap items-center gap-4 mt-4">
-                                <input id="payment-method-1" className='rounded-[4px]' type='radio'/>
+                                <input id="payment-method-1" className='rounded-[4px]' name='payment' type='radio'/>
                                 <label
                                   htmlFor="payment-method-1"
                                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -89,7 +89,7 @@ const Billing = () => {
                                 <Textarea className='w-full rounded-[5px] bg-white' placeholder='Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus debitis quaerat enim'></Textarea>
                             </div>
                             <div className="flex items-center gap-4 mt-4">
-                                <input id="payment-method-2" className='rounded-[4px]' type='radio'/>
+                                <input id="payment-method-2" className='rounded-[4px]' name='payment' type='radio'/>
                                 <label
                                   htmlFor="payment-method-2"
                                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

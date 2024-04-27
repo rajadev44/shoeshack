@@ -6,13 +6,13 @@ const heroSection = () => {
 
   return (
     <Container className='px-1'>
-            <div className="flex items-center justify-center h-[40vh] md:h-[60vh] relative">
+            <div className="flex items-center justify-center h-[30vh] md:h-[60vh] relative">
                 <div className='absolute top-0 w-full h-full overflow-hidden rounded-sm bg-primary -z-10'>
                  <img alt='hero-section' src='/hero-section-bg.jpg' className='object-cover w-full h-full rounded-sm' />
                 </div>
                 <div className="space-y-4 text-center md:space-y-8 text-primary-foreground">
                     <h1 className={`text-3xl font-bold md:text-6xl `}>Welcome to ShoeShack</h1>
-                    <p className="text-xl font-normal capitalize md:text-3xl text-primary-secondary ">The best place to buy shoes</p>
+                    <p className="text-xl font-normal capitalize md:text-2xl text-primary-secondary ">The best place to buy shoes</p>
                     <Button size={'lg'} variant={''} className='rounded-sm animate-bounce' > Shop Now</Button>
                 </div>
             </div>

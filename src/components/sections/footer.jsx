@@ -9,16 +9,16 @@ const footer = () => {
         <ContainerV2>
         <footer className='pt-8 space-y-8 md:space-y-10 md:pt-24'>
           <hr className='border-primary' />
-          <div className='flex flex-wrap justify-between gap-4'>
+          <div className='flex flex-wrap justify-between gap-4 gap-y-10'>
             
-              <div className='mb-8 space-y-4 md:mb-0 md:space-y-8 basis-full md:basis-1/4 grow'>
+              <div className='grid space-y-4 md:space-y-8 basis-80 grow md:place-items-start place-items-center'>
                 <p className="text-xl font-semibold text-primary md:text-3xl" > ShoeShack</p>
-                <p className='text-sm md:text-lg text-muted-primary text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis optio ...</p>
+                <p className='text-sm text-center md:text-lg text-muted-primary md:text-start lg:text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis optio ...</p>
               </div>
               
-              <div className='space-y-4 md:space-y-8 basis-1/4 md:basis-1/5'>
-                <h2 className='font-medium text-md md:text-xl '>Quick Links</h2>
-                <ul className='flex flex-col space-y-1 text-sm md:text-md'>
+              <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
+                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
+                <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
                   <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
@@ -26,18 +26,18 @@ const footer = () => {
                 </ul>
               </div>
               
-              <div className='space-y-4 md:space-y-8 basis-1/4 md:basis-1/5'>
-                <h2 className='font-medium text-md md:text-xl '>Quick Links</h2>
-                <ul className='flex flex-col space-y-1 text-sm md:text-md'>
+              <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
+                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
+                <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
                   <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
                 </ul>
               </div>
               
-              <div className='space-y-4 md:space-y-8 basis-1/4 md:basis-1/5'>
-                <h2 className='font-medium text-md md:text-xl '>Quick Links</h2>
-                <ul className='flex flex-col space-y-1 text-sm md:text-md'>
+              <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
+                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
+                <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
                   <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
                   <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
@@ -45,7 +45,7 @@ const footer = () => {
               </div>
           </div>
           
-          <div className='flex items-center justify-between'>
+          <div className='flex flex-col-reverse items-center justify-between pb-4 gap-y-1 md:flex-row'>
             <p className='text-sm text-muted-foreground md:text-md '>Copyright © 2024 All Rights Reserved </p>
             <ul className='flex text-neutral-500'>
               <li><Button variant='icon' size='icon' className='text-md md:text-lg'  >< FaFacebook /></Button></li>

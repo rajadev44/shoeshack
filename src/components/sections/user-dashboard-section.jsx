@@ -1,6 +1,7 @@
 import Container , { ContainerV2 } from "../ui/container"
 import { CircleDollarSign,  Download, LayoutDashboard,  LogOutIcon, Map,  ShoppingBasket, User } from "lucide-react";
 import Typography from "../ui/typography";
+import { Button } from "../ui/button";
 
 const UserDashboardSection = () => {
   return (
@@ -9,7 +10,7 @@ const UserDashboardSection = () => {
             
             <div className="flex flex-wrap gap-10 my-16 md:my-20">
                 {/* dashboard vertical navigation section contains links Dashboard with icon of meter, order with icon, downloads with icon, address with icon, payment with icon Account with icon and logout with icon. each items has border bottom for looking beautiful  (note: use lucide-react component icon) */}
-                <div className="basis-56">
+                <div className="basis-full md:basis-56">
                         <a href="#" className="flex items-center py-3 border-t border-b border-gray-300 hover:bg-secondary">
                             Dashboard
                             <LayoutDashboard className="ml-auto"/>
@@ -39,9 +40,9 @@ const UserDashboardSection = () => {
                             <LogOutIcon className="ml-auto"/>
                         </a>
                 </div>
-                <div className="grow">
+                <div className="basis-96 grow">
                     <Typography variant='muted' className="text-xs md:text-sm">
-                        Order #29 was placed on April 17,2024 and is currently Completed.
+                        Order #29 was placed on April 17, 2024 and is currently Completed.
                     </Typography>
 
                     <Typography className="my-4" like="h5">Order Detail</Typography>
@@ -70,7 +71,7 @@ const UserDashboardSection = () => {
                       <Typography className='basis-1/2' variant="muted">£100.00</Typography>
                     </div>
                     
-                    <button className="my-10 px-4 py-2 shadow h-9 bg-primary text-primary-foreground hover:bg-primary/90 rounded-[2px] text-semibold"> ORDER AGAIN </button>
+                    <Button size='sm' className='mt-10 rounded-[4px]'> ORDER AGAIN </Button>
                 </div>
             </div>
         </ContainerV2>

@@ -18,6 +18,7 @@ const ProductReview = () => {
                        <StarFilledIcon className="w-[1em] h-[1em] text-xl "/>
                        <StarFilledIcon className="w-[1em] h-[1em] text-xl "/>
                        <StarFilledIcon className="w-[1em] h-[1em] text-xl "/>
+                       <StarFilledIcon className="w-[1em] h-[1em] text-xl "/>
                      </span>
                      <span><Button variant='secondary'>Write a Review</Button></span>
                     </div>
@@ -29,8 +30,9 @@ const ProductReview = () => {
                         <StarFilledIcon />
                         <StarFilledIcon />
                         <StarFilledIcon />
+                        <StarFilledIcon />
                       </div>
-                      <Typography like='h5' className="font-bold">William on April 15,2024 </Typography>
+                      <Typography like='h5' className="font-bold">William on April 15, 2024 </Typography>
                   </div>
                   <Typography like='h5'className="font-bold"> Cute design </Typography>
                   <Typography variant="muted" like="p">Very good quality shoes, I like them! Will order again soon.</Typography>

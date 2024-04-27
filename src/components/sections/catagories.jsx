@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import Container from "../ui/container";
+import Container, { ContainerV2 } from "../ui/container";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -34,16 +34,18 @@ const Catagories = () => {
       id: 3,
       name: "Puma RS-X",
       description:
-        "The Puma RS-X is a retro-inspired sneaker with a chunky silhouette and vibrant colorways.",
+        "The Puma RS-X is a retro-inspired sneaker with a chunky silhouette and vibrant colorways lightweight construction.",
       img: "/products/product-3.png",
     },
   ];
   return (
     <Container>
+      <ContainerV2>
+        
       <div className='pt-8 md:pt-14'>
-        <div className='grid mt-5 mb-16 space-y-5 place-items-center'>
+        <div className='grid mt-5 mb-6 space-y-5 md:mb-16 place-items-center'>
             <h2 className='text-4xl font-medium '>Categories</h2>
-            <p className="text-xl font-normal capitalize md:text-3xl text-muted-foreground">Explore our wide range of shoe categories</p>
+            <p className="text-sm font-normal capitalize md:text-xl text-muted-foreground">Explore our wide range of shoe categories</p>
         </div>
 
 
@@ -54,10 +56,10 @@ const Catagories = () => {
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className='justify-center'>
+          <CarouselContent className=''>
             {categories.map((category, index) => (
               <CarouselItem
-                className='h-full md:basis-1/2 lg:basis-1/4 group hover:cursor-pointer'
+                className='h-full md:basis-1/2 lg:basis-1/3 group hover:cursor-pointer'
                 key={index}
               >
                 <Link to='/'>
@@ -71,12 +73,12 @@ const Catagories = () => {
                         />
                       </CardContent>
                       <CardTitle className=''>
-                        <h3 className='text-3xl text-center group-hover:text-primary-foreground group-hover:underline group-hover:underline-offset-8 '>
+                        <h3 className='text-xl text-center group-hover:text-primary-foreground group-hover:underline group-hover:underline-offset-8 '>
                           {category.name}
                         </h3>
                       </CardTitle>
                       <CardDescription>
-                        <p className='px-8 text-center md:text-lg group-hover:text-muted text-balance'>
+                        <p className='px-8 text-sm text-center group-hover:text-muted text-balance'>
                           {category.description}
                         </p>
                       </CardDescription>
@@ -91,6 +93,7 @@ const Catagories = () => {
           </CarouselContent>
         </Carousel>
       </div>
+      </ContainerV2>
     </Container>
   );
 };
