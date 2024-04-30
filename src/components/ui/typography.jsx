@@ -16,6 +16,9 @@ const Typography = ({ element, className: style = '', children, variant, like })
         case 'muted':
             className = 'text-muted-foreground';
             break;
+        case 'error':
+            className = 'text-destructive';
+            break;
         default:
             className = 'text-primary';
     }

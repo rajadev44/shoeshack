@@ -7,6 +7,11 @@ import CartPage from "./pages/CartPage";
 import ProductPage from './pages/ProductPage' 
 import Shop from './pages/Shop'
 import UserDashboard from './pages/UserDashboard'
+import Login from './pages/LoginPage';
+import SignUp from './pages/SignUp';
+import ProtectedRoute from "./components/sections/protected-route";
+import UnProtectedRoute from "./components/sections/un-protected-route";
+
 
 function App() {
   return (
@@ -19,7 +24,9 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
           <Route path='/cart' element={<CartPage/>} />
-          <Route path="/dashboard" element={<UserDashboard/>}/>
+          <Route path="/dashboard" element={<ProtectedRoute><UserDashboard/></ProtectedRoute>}/>
+          <Route path="/login" element={<UnProtectedRoute><Login/></UnProtectedRoute>}/>
+          <Route path="/sign-up" element={<UnProtectedRoute><SignUp/></UnProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
   );

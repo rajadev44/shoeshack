@@ -2,6 +2,20 @@
   @tailwind components;
   @tailwind utilities;
 
+  :root{
+    
+    --toastify-toast-width: 240px !important;
+    --toastify-toast-min-height: 40px !important;
+    --toastify-toast-max-height: 40px !important;
+    /* --toastify-font-family: sans-serif; */
+    --toastify-z-index: 9999;
+  }
+  .Toastify__toast{
+    padding: 0 !important;
+  }
+  .Toastify__close-button{
+    display: none;
+  }
   
 @layer base {
   :root {
@@ -25,6 +39,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.75rem;
+    
   }
 
   .dark {

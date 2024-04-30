@@ -2,8 +2,35 @@ import Container , { ContainerV2 } from "../ui/container"
 import { CircleDollarSign,  Download, LayoutDashboard,  LogOutIcon, Map,  ShoppingBasket, User } from "lucide-react";
 import Typography from "../ui/typography";
 import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { logout } from "@/features/authentication";
+import { useDispatch } from "react-redux";
 
 const UserDashboardSection = () => {
+  const navigate = useNavigate();
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+          console.log("uid", uid)
+        } else {
+          console.log("user is logged out")
+        }
+      });
+  }, [])
+  
+  const dispatch = useDispatch(); 
+  const handleLogout = () => {               
+      signOut(auth).then(() => {
+      dispatch(logout())
+      navigate("/");
+      console.log("Signed out successfully")
+    });
+  }
+  
   return (
     <Container>
         <ContainerV2>
@@ -11,34 +38,48 @@ const UserDashboardSection = () => {
             <div className="flex flex-wrap gap-10 my-16 md:my-20">
                 {/* dashboard vertical navigation section contains links Dashboard with icon of meter, order with icon, downloads with icon, address with icon, payment with icon Account with icon and logout with icon. each items has border bottom for looking beautiful  (note: use lucide-react component icon) */}
                 <div className="basis-full md:basis-56">
-                        <a href="#" className="flex items-center py-3 border-t border-b border-gray-300 hover:bg-secondary">
+                        <button className="flex items-center w-full py-3 border-t border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Dashboard
+                            </Typography>
                             <LayoutDashboard className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Orders
+                            </Typography>
                             <ShoppingBasket className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Downloads
+                            </Typography>
                             <Download className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Addresses
+                            </Typography>
                             <Map className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Payment Methods
+                            </Typography>
                             <CircleDollarSign className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Account Details
+                            </Typography>
                             <User className="ml-auto"/>
-                        </a>
-                        <a href="#" className="flex items-center py-3 border-b border-gray-300 hover:bg-secondary">
+                        </button>
+                        <button onClick={handleLogout} className="flex items-center w-full py-3 border-b border-gray-300 hover:bg-secondary">
+                            <Typography>
                             Logout
+                            </Typography>
                             <LogOutIcon className="ml-auto"/>
-                        </a>
+                        </button>
                 </div>
                 <div className="basis-96 grow">
                     <Typography variant='muted' className="text-xs md:text-sm">
@@ -71,7 +112,7 @@ const UserDashboardSection = () => {
                       <Typography className='basis-1/2' variant="muted">£100.00</Typography>
                     </div>
                     
-                    <Button size='sm' className='mt-10 rounded-[4px]'> ORDER AGAIN </Button>
+                    <Button size='sm' className='mt-10 rounded-[4px]' onClick={()=>{navigate("/shop")}}> ORDER AGAIN </Button>
                 </div>
             </div>
         </ContainerV2>

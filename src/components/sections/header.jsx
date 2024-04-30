@@ -5,7 +5,10 @@ import Icons from "../../assets/icons"
 import Menu from "@/components/ui/menu";
 import { Menu as MenuIcon } from "lucide-react";
 
-const header = () => {
+
+const Header = () => {
+  
+
   return (
     <Container>
       <ContainerV2>
@@ -33,7 +36,9 @@ const header = () => {
         </nav>
         <div>
           <ul className="flex space-x-1 md:space-x-4">
-            {/* <li> <Icons name='search'/>  </li> */}
+            {/*!isAuthenticated && 
+                <li> <Button size='sm'  asChild><Link to='/login'>Login</Link></Button> </li>
+            */}
             <li> <Link to='/dashboard'><Icons name='user'/> </Link>    </li>
             <li> <Link to='/cart'><Icons name='cart'/> </Link>    </li>
           </ul>
@@ -45,4 +50,4 @@ const header = () => {
   )
 }
 
-export default header
+export default Header
