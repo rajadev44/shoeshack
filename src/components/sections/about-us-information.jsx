@@ -10,20 +10,21 @@ const aboutUsInformation = () => {
         <div className=''>
           <Typography element='h4' className='pb-3 text-center md:pb-4 md:text-start' >Our Mission</Typography>  
           <Typography like='p' className='font-normal text-center md:text-justify' variant='muted'>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.
+          At ShoeShack, our mission is to provide our customers with the highest quality footwear and an exceptional shopping experience.
+
           </Typography>
           <Typography like='p' className='font-normal text-center md:text-justify' variant='muted'>
-            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model  eWAV text, and a search for  will uncover many web sites still in their infancy.
+          We are passionate about fashion, innovation, and customer satisfaction. Our goal is to empower our customers to express their personal style through the perfect pair of shoes.
           </Typography>
         </div>
         
         <div className=''>
           <Typography element='h4' className='pb-3 text-center md:pb-4 md:text-start' >Our Vision</Typography>  
           <Typography like='p' className='font-normal text-center md:text-justify' variant='muted'>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.
+          Our vision is to become the premier destination for stylish, comfortable, and durable shoes. We strive to curate a diverse collection of footwear that caters to the diverse needs and preferences of our customers. By continuously expanding our product offerings, leveraging the latest technologies, and delivering unparalleled customer service, we aim to be the go-to choice for anyone seeking the perfect pair of shoes to complement their lifestyle.
           </Typography>
           <Typography like='p' className='font-normal text-center md:text-justify' variant='muted'>
-            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model  eWAV text, and a search for  will uncover many web sites still in their infancy.
+          We envision a future where our customers can effortlessly find the shoes that not only look great but also provide the comfort and support they need, whether they're dressing up for a special occasion, commuting to work, or embarking on an adventure. Through our commitment to innovation, sustainability, and customer-centric values, we strive to be a trusted and beloved brand that empowers our customers to step out in style and confidence.
           </Typography>
         </div>
       </div>

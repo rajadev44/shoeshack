@@ -165,7 +165,7 @@ const Billing = () => {
                                 >
                                  Bank Transfer
                                 </label>
-                                <Textarea className='w-full rounded-[5px] bg-white' placeholder='Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus debitis quaerat enim'></Textarea>
+                                <Textarea className='w-full rounded-[5px] bg-white' placeholder='Bank transfer details'></Textarea>
                             </div>
                             <div className="flex items-center gap-4 mt-4">
                                 <input value={'cash'} onChange={handleChangeInput} id="payment-method-2" className='rounded-[4px]' name='payment' type='radio'/>
