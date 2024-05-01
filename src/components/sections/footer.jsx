@@ -13,34 +13,37 @@ const footer = () => {
             
               <div className='grid space-y-4 md:space-y-6 basis-80 grow md:place-items-start place-items-center'>
                 <p className="text-xl font-semibold text-primary md:text-3xl" > ShoeShack</p>
-                <p className='text-sm text-center md:text-normal text-muted-primary md:text-start lg:text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis optio ...</p>
+                <p className='text-sm text-center md:text-normal text-muted-primary md:text-start lg:text-balance'> 
+                ShoeShack is favorite choice for buying shoes online.
+                </p>
               </div>
               
               <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
                 <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
                 <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
-                  <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
-                  <li> <Link to='/contact' className={` hover:underline hover:underline-offset-4 font-normal`}> Contact Us </Link></li>
+                  <li> <Link to='' className={` hover:underline hover:underline-offset-4 font-normal`}> Shipping Policy </Link></li>
+                  <li> <Link to='' className={` hover:underline hover:underline-offset-4 font-normal`}> Refund Policy </Link></li>
+                  <li> <Link to='' className={` hover:underline hover:underline-offset-4 font-normal`}> Privacy Policy </Link></li>
+                  <li> <Link to='' className={` hover:underline hover:underline-offset-4 font-normal`}> Terms of Service </Link></li>
                 </ul>
               </div>
               
               <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
-                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
+                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Support</h2>
                 <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
+                  <li> <Link to='/contact' className={` hover:underline hover:underline-offset-4 font-normal`}> Contact </Link></li>
+                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> FAQs </Link></li>
                   <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
                 </ul>
               </div>
               
               <div className='grid space-y-4 md:space-y-8 grow basis-52 place-items-center md:place-items-start'>
-                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Quick Links</h2>
+                <h2 className='font-medium underline text-md md:text-xl underline-offset-4 md:no-underline'>Contact Us</h2>
                 <ul className='flex flex-col space-y-1 text-sm text-center md:text-start md:text-md'>
-                  <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> About </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Offer & Discount </Link></li>
-                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Get Coupon </Link></li>
+                  <li> <Link to='/about' className={` hover:underline hover:underline-offset-4 font-normal`}> Email </Link></li>
+                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Phone </Link></li>
+                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Address </Link></li>
+                  <li> <Link to='/' className={` hover:underline hover:underline-offset-4 font-normal`}> Whatsapp </Link></li>
                 </ul>
               </div>
           </div>

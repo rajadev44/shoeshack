@@ -20,6 +20,7 @@ import { useDispatch } from "react-redux"
 import { toast } from "react-toastify"
 import { useState } from "react"
 import Typography from "@/components/ui/typography"
+import Footer from "@/components/sections/footer"
 
 export default function LoginForm() {
   
@@ -138,6 +139,7 @@ export default function LoginForm() {
     </ContainerV2>
     </Container>
     
+    <Footer/>
     </>
   )
 }

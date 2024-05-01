@@ -3,6 +3,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Container, { ContainerV2 } from "../ui/container";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
+import { collection, addDoc , query, where, getDocs} from "firebase/firestore";
+import { db } from "@/lib/firebase"
 import {
   Card,
   CardContent,
@@ -12,9 +14,11 @@ import {
 } from "../ui/card";
 
 const Catagories = () => {
+  
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+  
   const categories = [
     {
       id: 1,
@@ -62,7 +66,7 @@ const Catagories = () => {
                 className='h-full md:basis-1/2 lg:basis-1/3 group hover:cursor-pointer'
                 key={index}
               >
-                <Link to='/'>
+                <Link to='/shop'>
                   <div className='p-1'>
                     <Card className='space-y-4 rounded-md group-hover:bg-primary'>
                       <CardContent className='flex items-center justify-center p-6 overflow-hidden rounded-md aspect-square'>

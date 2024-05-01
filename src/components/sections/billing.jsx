@@ -6,6 +6,8 @@ import * as yup from 'yup';
 import Typography from "../ui/typography";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { orderPlace } from "@/features/products";
 
 const Billing = () => {
   const navigate  = useNavigate();
@@ -36,9 +38,8 @@ const Billing = () => {
     town: yup.string().required(),
     state: yup.string().required(),
     postcode: yup.number().required(),
-    phone: yup.number().required(),
+    phone: yup.number().required("phone number is required"),
     email: yup.string().email().required(),
-    order: yup.string().required(),
     payment: yup.string().required("please select payment option"),
   })
   
@@ -48,6 +49,8 @@ const Billing = () => {
     setBillingForm(bill=> ({...bill, [name]: value}))
   }
 
+  const dispatch = useDispatch();
+  
   const handlePlaceOrder = () => {
     billingSchema.validate(billingForm)
     .then((data)=>{
@@ -64,6 +67,7 @@ const Billing = () => {
         theme: "dark",
       });
       navigate("/dashboard")
+      dispatch(orderPlace());
       setErrors([])
     })
     .catch((err)=>{
@@ -71,6 +75,10 @@ const Billing = () => {
     })
   }
 
+  const cart = useSelector(state => state.product.cart);
+  const shipping = 5;
+  const subtotal = cart.reduce((acc, item)=> acc + (item.price*item.quantity), 0);
+  const total = subtotal + shipping;
 
   return (
     <Container>
@@ -122,25 +130,27 @@ const Billing = () => {
                             <p>Product</p>
                             <p>Total</p>
                           </div>
-                          <div className="flex items-center justify-between mt-4">
-                            <p>Product 1</p>
-                            <p>£100.00</p>
-                          </div>
-                          <div className="flex items-center justify-between mt-4">
-                            <p>Product 2</p>
-                            <p>£100.00</p>
-                          </div>
+                                                   
+                          {
+                            cart && cart.map((item, index)=>(
+                              <div key={index} className="flex items-center justify-between mt-4">
+                                <p className="font-semibold capitalize">{item.title}</p>
+                                <p className="font-semibold ">{item.quantity} x £{item.price}</p>
+                              </div>
+                              
+                            ))
+                          }
                           <div className="flex items-center justify-between mt-4">
                             <p>Subtotal</p>
-                            <p>£200.00</p>
+                            <p>£{subtotal}</p>
                           </div>
                           <div className="flex items-center justify-between mt-4">
                             <p>Shipping</p>
-                            <p>£5.00</p>
+                            <p>£{shipping}</p>
                           </div>
                           <div className="flex items-center justify-between mt-4">
                             <p>Total</p>
-                            <p>£205.00</p>
+                            <p>£{total}</p>
                           </div>
                           
                           <hr />

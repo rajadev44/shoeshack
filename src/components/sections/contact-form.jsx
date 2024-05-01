@@ -16,7 +16,7 @@ const ContactForm = () => {
   let schema = yup.object().shape({
     name: yup.string().required(),
     phone:yup.string()
-    .required("required")
+    .required()
     .matches(phoneRegExp, 'Phone number is not valid')
     .min(11, "Phone number is not valid, must be 11 digits")
     .max(11, "Phone number is not valid, must be 11 digits"),

@@ -10,17 +10,15 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import Container, { ContainerV2 } from "@/components/ui/container"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Header from "@/components/sections/header"
 import * as yup from 'yup';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { auth } from "@/lib/firebase"
-import { login } from "@/features/authentication"
-import { useDispatch } from "react-redux"
 import { toast } from "react-toastify"
 import { useState } from "react"
 import Typography from "@/components/ui/typography"
-
+import Footer from "@/components/sections/footer";
 export default function SignUp() {
     
   const loginSchema = yup.object().shape({
@@ -48,7 +46,9 @@ export default function SignUp() {
   
   const [errors, setErrors] = useState([]);
 
-  const dispatch = useDispatch();
+ 
+  const navigate = useNavigate();
+  
   const handleSignUp = () => {
     const {username, email, password} = form; 
     loginSchema.validate({username, email, password})
@@ -61,7 +61,6 @@ export default function SignUp() {
             displayName: form.username
           })
           
-          dispatch(login({...user, displayName: form.username}));
           toast.success('Thanks For Registration', {
             position: "top-right",
             autoClose: 2000,
@@ -73,6 +72,7 @@ export default function SignUp() {
             progress: undefined,
             theme: "dark",
           });
+          navigate("/login");
           setErrors([])
         })
         .catch(() => {
@@ -150,7 +150,7 @@ export default function SignUp() {
     </Card>
     </ContainerV2>
     </Container>
-    
+    <Footer/>
     </>
   )
 }
