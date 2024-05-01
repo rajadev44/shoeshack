@@ -24,7 +24,7 @@ const aboutUsInformation = () => {
           Our vision is to become the premier destination for stylish, comfortable, and durable shoes. We strive to curate a diverse collection of footwear that caters to the diverse needs and preferences of our customers. By continuously expanding our product offerings, leveraging the latest technologies, and delivering unparalleled customer service, we aim to be the go-to choice for anyone seeking the perfect pair of shoes to complement their lifestyle.
           </Typography>
           <Typography like='p' className='font-normal text-center md:text-justify' variant='muted'>
-          We envision a future where our customers can effortlessly find the shoes that not only look great but also provide the comfort and support they need, whether they're dressing up for a special occasion, commuting to work, or embarking on an adventure. Through our commitment to innovation, sustainability, and customer-centric values, we strive to be a trusted and beloved brand that empowers our customers to step out in style and confidence.
+          We envision a future where our customers can effortlessly find the shoes that not only look great but also provide the comfort and support they need, whether they are dressing up for a special occasion, commuting to work, or embarking on an adventure. Through our commitment to innovation, sustainability, and customer-centric values, we strive to be a trusted and beloved brand that empowers our customers to step out in style and confidence.
           </Typography>
         </div>
       </div>
